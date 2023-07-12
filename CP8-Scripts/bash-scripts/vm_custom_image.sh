@@ -84,14 +84,17 @@ windows_vm_from_custom_image $vm $nic_name $hyperv_gen
 
 vm="$VM_WS"
 nic_name="$NIC_WS"
+hyperv_gen="V1"
 windows_vm_from_custom_image $vm $nic_name $hyperv_gen
 
 vm="$VM_LR"
 nic_name="$NIC_LR"
+hyperv_gen="V2"
 windows_vm_from_custom_image $vm $nic_name $hyperv_gen
 
 vm="$VM_LS"
 nic_name="$NIC_LS"
+hyperv_gen="V2"
 windows_vm_from_custom_image $vm $nic_name $hyperv_gen
 
 echo
