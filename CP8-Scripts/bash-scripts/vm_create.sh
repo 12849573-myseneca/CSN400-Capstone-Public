@@ -98,6 +98,25 @@ linux_vm_create "$VM_LS" "$VM_IMG_LS" "$NIC_LS"
 
 echo
 echo "---------------------------------------------------"
+echo "Configuring Auto shutdown for all VMs at 0500 UTC"
+echo "---------------------------------------------------"
+echo
+
+shutdown_time="0500"
+
+for vm_name in "${vm_list[@]}"
+do
+echo "---------------------------------------------------------------------"
+echo "Creating auto-shutdown schedule for: $vm_name"
+echo "---------------------------------------------------------------------"
+# read -r answer
+# if [[ "$answer" == "yes" ]]; then
+    az vm auto-shutdown -g $RG_NAME -n $vm_name --location $LOCATION --time $shutdown_time
+# fi
+done
+
+echo
+echo "---------------------------------------------------"
 echo "VMs created without error!"
 echo "END!"
 echo "---------------------------------------------------"

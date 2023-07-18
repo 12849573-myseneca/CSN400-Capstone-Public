@@ -13,7 +13,6 @@ Student_vnet_address=""
 Client_Subnet_name=""
 Client_Subnet_address=""
 
-
 # ---------------------------------------------------
 # Networking - Virtual Networks
 Router_vnet_name="Router-$ID"

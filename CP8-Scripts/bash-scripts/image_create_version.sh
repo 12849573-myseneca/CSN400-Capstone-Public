@@ -38,8 +38,6 @@ os_type=$2
 hyperv_gen=$3
 image_ver=$4
 
-hyperv_gen="V2"
-
 base_name=$(echo "$vm_name" | tr '[:upper:]' '[:lower:]')
 image_name="$base_name-ver-$target_version"
 osDisk_id=$(az vm get-instance-view -g $RG_NAME -n $vm_name -o tsv --query storageProfile.osDisk.managedDisk.id)
@@ -85,14 +83,18 @@ echo
 
 os_type="Windows"
 vm=$VM_WC
+hyperv_gen="V2"
 custom_image_create "$vm" "$os_type" "$hyperv_gen" "$target_version"
 vm=$VM_WS
+hyperv_gen="V1"
 custom_image_create "$vm" "$os_type" "$hyperv_gen" "$target_version" 
 
 os_type="Linux"
 vm=$VM_LR
+hyperv_gen="V2"
 custom_image_create "$vm" "$os_type" "$hyperv_gen" "$target_version"
 vm=$VM_LS
+hyperv_gen="V2"
 custom_image_create "$vm" "$os_type" "$hyperv_gen" "$target_version"
 
 echo "Iamge List"
