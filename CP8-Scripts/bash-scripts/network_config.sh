@@ -5,14 +5,14 @@
 # /////////////////////////////////////////////////////////////
 
 
-RG_NAME=""     # your student group
-LOCATION=""    # your location
-ID=""          #unique ID assigned to you
+RG_NAME="Student-RG-949335"     # your student group
+LOCATION="canadacentral"    # your location
+ID="117"          #unique ID assigned to you
 
-Student_vnet_name=""
-Student_vnet_address=""
-Client_Subnet_name=""
-Client_Subnet_address=""
+Student_vnet_name="Student-949335-vnet"
+Student_vnet_address="10.8.55.0/24"
+Client_Subnet_name="Virtual-Desktop-Client"
+Client_Subnet_address="10.8.55.0/24"
 
 # ---------------------------------------------------
 # Networking - Virtual Networks
